@@ -1,1 +1,62 @@
+// colors
+$clr-primary-400: hsl(177, 68%, 64%);
+$clr-secondary-400: hsl(12, 94%, 65%);
+$clr-tertiary-400: hsl(33, 100%, 70%);
 
+$clr-neutral-100: hsl(20, 33%, 98%);
+$clr-neutral-800: hsl(244, 23%, 12%);
+
+// font families
+$ff: 'IBM Plex Sans', sans-serif;
+
+// font weight
+$fw-regular: 400;
+$fw-bold: 700;
+
+// font sizes
+$fs-8: 1rem;
+$fs-10: 1.125rem;
+$fs-12: 1.25rem;
+$fs-14: 2.5rem;
+$fs-16: 4rem;
+$fs-18: 5.5rem;
+
+// line heights
+$lh-8: 16px;
+$lh-10: 20px;
+$lh-12: 26px;
+$lh-14: 28px;
+$lh-16: 32px;
+$lh-18: 34px;
+$lh-20: 48px;
+$lh-22: 52px;
+$lh-24: 64px;
+$lh-26: 88px;
+
+// letter Spacing
+$ls-4: -1px;
+$ls-6: -0.75px;
+$ls-8: -0.45px;
+
+// sizes
+
+// placeholders
+
+// mixins
+
+// basic reset
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+body {
+	font-family: $ff;
+}
