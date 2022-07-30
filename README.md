@@ -11,9 +11,9 @@ This project is built of the challenges that are available on Front End Mentor. 
 
 ## Technologies
 Project is created with:
-*HTML5
-*SCSS
-*YARN:3.2.2
-*JSON: 1.0.0
+* HTML5
+* SCSS
+* YARN:3.2.2
+* JSON: 1.0.0
 
 ## Setup
