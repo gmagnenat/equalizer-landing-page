@@ -1,27 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="css/main.css" />
-		<title>Frontend Mentor | Equalizer landing page</title>
-	</head>
-	<body>
-		We make your music sound extraordinary. A system audio equalizer
-		specifically designed for Android and iOS. Freely tune the way your music
-		sounds with a professional grade parametric EQ & volume mixer. Control bass,
-		mids, treble, gain control, reverb, and more! Premium EQ Get expert-level
-		control with a robust equalizer, volume mixer, and spatial audio. Take your
-		listening experience to a whole new level and access all our incredible
-		features! $4 / month iOS Download Android Download All rights reserved ©
-		Equalizer 2021 Have any problems? Contact us via social media or email us at
-		equalizer@example.com
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.css" />
+	<title>Frontend Mentor | Equalizer landing page</title>
+</head>
+
+<body>
+	<!-- header to store the logo and the art at the very end of the page -->
+	<header class="heading">
+		<div class="logo">
+			<img src="./assets/logo.svg" alt="">
+		</div>
+	</header>
+	<!-- End of Navbar -->
+
+	<!-- Section that contains all the texts  -->
+	<section class="hero-texts">
+		<div class="container">
+			<h1> We make your music sound extraordinary</h1>
+			<p>
+				A system audio equalizer
+				specifically designed for Android and iOS. Freely tune the way your music
+				sounds with a professional grade parametric EQ & volume mixer. Control bass,
+				mids, treble, gain control, reverb, and more!
+			</p>
+		</div>
+	</section>
+
+	<!-- Section of the hero images -->
+
+	<!-- The black background has me questioning if the blue art inside should be in it or hero-imgs should just be set to absolute. -->
+	<section class="hero-imgs">
+		<div class="container">
+			<div class="blue-art">
+				<img src="./assets/bg-pattern-2.svg" alt="">
+			</div>
+
+			<div class="app-img">
+				<img src="./assets/illustration-app.png" alt="">
+			</div>
+			<!-- Orange card begins -->
+			<div class="card">
+				<h1 class="card-title">Premium EQ</h1>
+				</article>
+				<div class="card-body">
+					<p>
+						Get expert-level
+						control with a robust equalizer, volume mixer, and spatial audio. Take your
+						listening experience to a whole new level and access all our incredible
+						features!
+					</p>
+
+					<div class="pricing">
+						<div class="money">
+							<span>$4</span>
+							<span>/month</span>
+						</div>
+						<div class="btns">
+							<button class="btn-ios">
+								ios Download
+							</button>
+							<button class="btn-driod"> Android Download
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end of hero images -->
+
+	<!-- Footer-->
+	<footer class="foot-container">
+		<div class="logo">
+			<img src="./assets/logo.svg" alt="">
+		</div>
+		<div class="center-text">
+			<p>
+				All rights reserved &copy;Equalizer 2022
+				Have any problems? Contact us via social media or email us at
+				<span class="bold">
+					equalizer@example.com
+				</span>
+			</p>
+		</div>
+		<div class="socials">
+			<a href="#">
+				<img src="./assets/icon-facebook.svg" alt="">
+			</a>
+			<a href="#">
+				<img src="./assets/icon-instagram.svg" alt="">
+			</a>
+			<a href="#">
+				<img src="./assets/icon-twitter.svg" alt="">
+			</a>
+		</div>
+	</footer>
+	<!-- End of footer -->
+
+	<!-- End of container -->
+
+</body>
+
 </html>
