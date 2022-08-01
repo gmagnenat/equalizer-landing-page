@@ -213,18 +213,18 @@ body {
 .foot-container{
 	margin-top: 4rem;
 
-	& .logo{
+	 .logo{
 		padding-bottom: $fs-12;
 	}
 
-	& .center-text{
+	 .center-text{
 		width: 295px;
 		margin-top: 1rem;
 		p{
 			line-height: $lh-14;
 		}
 		span{
-			font-weight: bold;
+			font-weight: $fw-bold;
 		}
 	}
 
@@ -233,7 +233,7 @@ body {
 		padding-bottom: 2rem;
 		display: flex;
 
-		& a{
+		 a{
 			margin-right: 1rem;		}
 	}
 
