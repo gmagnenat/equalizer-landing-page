@@ -206,3 +206,38 @@ body {
 	&--android {
 	}
 }
+
+
+// footer
+
+.foot-container{
+	margin-top: 4rem;
+
+	& .logo{
+		padding-bottom: $fs-12;
+	}
+
+	& .center-text{
+		width: 295px;
+		margin-top: 1rem;
+		p{
+			line-height: $lh-14;
+		}
+		span{
+			font-weight: bold;
+		}
+	}
+
+	.socials{
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+		display: flex;
+
+		& a{
+			margin-right: 1rem;		}
+	}
+
+
+}
+
+
