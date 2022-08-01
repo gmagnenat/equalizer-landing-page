@@ -14,4 +14,54 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
+.heading {
+  width: min(375px, 100%);
+  margin-inline: auto;
+}
+
+.hero-texts {
+  width: min(375px, 100%);
+  margin-inline: auto;
+}
+
+.hero-imgs {
+  background-color: hsl(244deg, 23%, 12%);
+  position: relative;
+  width: min(375px, 100%);
+  margin-inline: auto;
+}
+.hero-imgs .app-img {
+  position: relative;
+  top: -20%;
+}
+.hero-imgs .app-img > img {
+  width: 85%;
+}
+.hero-imgs .blue-art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.foot-container {
+  width: min(375px, 100%);
+  margin-inline: auto;
+}
+
+.card {
+  background-color: hsl(12deg, 94%, 65%);
+  padding: 2rem;
+  color: hsl(20deg, 33%, 98%);
+  border-radius: 1rem;
+}
+.card .card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
 /*# sourceMappingURL=main.css.map */
