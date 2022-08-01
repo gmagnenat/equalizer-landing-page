@@ -14,13 +14,13 @@ $fw-regular: 400;
 $fw-bold: 700;
 
 // font sizes
-$fs-8: 1rem;
-$fs-10: 1.125rem;
-$fs-12: 1.25rem;
-$fs-13: 2rem;
-$fs-14: 2.5rem;
-$fs-16: 4rem;
-$fs-18: 5.5rem;
+$fs-8: 1rem; // 16px
+$fs-10: 1.125rem; // 18px
+$fs-12: 1.25rem; // 20px
+$fs-13: 2rem; // 32px
+$fs-14: 2.5rem; // 40px
+$fs-16: 4rem; // 64px
+$fs-18: 5.5rem; // 88px
 
 // line heights
 $lh-8: 16px;
@@ -40,20 +40,16 @@ $ls-6: -0.75px;
 $ls-8: -0.45px;
 
 // sizes
-$space-8: 0.5rem;
-$space-16: 1rem;
-$space-32: 2rem;
-$space-64: 4rem;
-$space-80: 5rem;
-$space-128: 8rem;
+// maybe...
 
-$radius: $space-16;
+// utilities
+$radius: 2rem;
 
 // placeholders
 
 // mixins
-@mixin width-with-padding($width) {
-	width: min(100% - $spacing-32, $width);
+@mixin width-with-padding($width, $padding: 2rem) {
+	width: min(100% - $padding, $width);
 	margin-inline: auto;
 }
 
@@ -89,61 +85,64 @@ $radius: $space-16;
 	font: inherit;
 }
 
+html,
 body {
 	font-family: $ff;
+	height: 100%;
 }
 
-img {
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
 	max-width: 100%;
 }
 
-// Header
-.heading {
-	@include width-full(375px);
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
 }
 
-// hero
-.hero-texts {
+// hard set the width for mobile layout.
+// will be removed when the layout is responsive.
+body {
 	@include width-full(375px);
+
+	background: url(../assets/bg-main-mobile.png) no-repeat;
+	background-position: top -160px right 100%;
+	background-size: cover;
 }
 
-// hero images
-.hero-imgs {
-	background-color: $clr-neutral-800;
-	position: relative;
-	@include width-full(375px);
+.header {
+	padding-inline: 1.5rem;
+	margin-top: 2.5rem;
+}
 
-	.app-img {
-		position: relative;
-		top: -20%;
+.hero {
+	margin-top: 4rem;
 
-		> img {
-			width: 85%;
-		}
+	.container {
+		padding-inline: 1.5rem;
+		display: grid;
+		gap: 1.25rem;
 	}
 
-	.blue-art {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-	}
-}
-
-// footer
-.foot-container {
-	@include width-full(375px);
-}
-
-// Pricing card
-.card {
-	background-color: $clr-secondary-400;
-	padding: $space-32;
-	color: $clr-neutral-100;
-	@include radius-full;
-
-	.card-title {
-		font-size: $fs-13;
+	&__title {
+		font-size: $fs-14;
 		font-weight: $fw-bold;
-		margin-bottom: $space-8;
+		line-height: $lh-20;
+		letter-spacing: $ls-8;
+	}
+
+	&__body {
+		font-size: $fs-8;
+		line-height: $lh-12;
 	}
 }
