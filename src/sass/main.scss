@@ -17,6 +17,7 @@ $fw-bold: 700;
 $fs-8: 1rem;
 $fs-10: 1.125rem;
 $fs-12: 1.25rem;
+$fs-13: 2rem;
 $fs-14: 2.5rem;
 $fs-16: 4rem;
 $fs-18: 5.5rem;
@@ -39,10 +40,41 @@ $ls-6: -0.75px;
 $ls-8: -0.45px;
 
 // sizes
+$space-8: 0.5rem;
+$space-16: 1rem;
+$space-32: 2rem;
+$space-64: 4rem;
+$space-80: 5rem;
+$space-128: 8rem;
+
+$radius: $space-16;
 
 // placeholders
 
 // mixins
+@mixin width-with-padding($width) {
+	width: min(100% - $spacing-32, $width);
+	margin-inline: auto;
+}
+
+@mixin width-full($width) {
+	width: min($width, 100%);
+	margin-inline: auto;
+}
+
+@mixin radius-top {
+	border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+@mixin radius-bottom {
+	border-bottom-left-radius: $radius;
+	border-bottom-right-radius: $radius;
+}
+
+@mixin radius-full {
+	border-radius: $radius;
+}
 
 // basic reset
 *,
@@ -59,4 +91,59 @@ $ls-8: -0.45px;
 
 body {
 	font-family: $ff;
+}
+
+img {
+	max-width: 100%;
+}
+
+// Header
+.heading {
+	@include width-full(375px);
+}
+
+// hero
+.hero-texts {
+	@include width-full(375px);
+}
+
+// hero images
+.hero-imgs {
+	background-color: $clr-neutral-800;
+	position: relative;
+	@include width-full(375px);
+
+	.app-img {
+		position: relative;
+		top: -20%;
+
+		> img {
+			width: 85%;
+		}
+	}
+
+	.blue-art {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+}
+
+// footer
+.foot-container {
+	@include width-full(375px);
+}
+
+// Pricing card
+.card {
+	background-color: $clr-secondary-400;
+	padding: $space-32;
+	color: $clr-neutral-100;
+	@include radius-full;
+
+	.card-title {
+		font-size: $fs-13;
+		font-weight: $fw-bold;
+		margin-bottom: $space-8;
+	}
 }
