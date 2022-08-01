@@ -186,7 +186,7 @@ body {
 		}
 
 		&__buttons {
-			margin-top: 2rem;
+			margin-top: 4rem;
 			display: flex;
 			flex-direction: column;
 			gap: 0.5rem;
@@ -197,47 +197,75 @@ body {
 // button components
 .btn {
 	width: 100%;
+	border: none;
+	background-color: $clr-neutral-800;
+	color: $clr-neutral-100;
+	padding-block: 1rem;
+	line-height: $lh-16;
+	font-size: $fs-10;
+	font-weight: $fw-bold;
+	cursor: pointer;
+	text-align: center;
+
+	@include radius-full;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	&--alternate {
+		background-color: $clr-neutral-100;
+		color: $clr-neutral-800;
+	}
+
+	&--ios::before,
+	&--android::before {
+		margin-right: 0rem;
+		display: inline-block;
+		width: 1.75rem;
+		height: 1.75rem;
 	}
 
 	&--ios {
+		&::before {
+			content: url(../assets/icon-apple.svg);
+		}
 	}
 
 	&--android {
+		&::before {
+			content: url(../assets/icon-android.svg);
+		}
 	}
 }
 
-
 // footer
 
-.foot-container{
+.foot-container {
 	margin-top: 4rem;
 
-	 .logo{
+	.logo {
 		padding-bottom: $fs-12;
 	}
 
-	 .center-text{
+	.center-text {
 		width: 295px;
 		margin-top: 1rem;
-		p{
+		p {
 			line-height: $lh-14;
 		}
-		span{
+		span {
 			font-weight: $fw-bold;
 		}
 	}
 
-	.socials{
+	.socials {
 		padding-top: 3rem;
 		padding-bottom: 2rem;
 		display: flex;
 
-		 a{
-			margin-right: 1rem;		}
+		a {
+			margin-right: 1rem;
+		}
 	}
-
-
 }
-
-
