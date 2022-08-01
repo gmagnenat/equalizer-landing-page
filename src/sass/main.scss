@@ -14,12 +14,13 @@ $fw-regular: 400;
 $fw-bold: 700;
 
 // font sizes
-$fs-8: 1rem;
-$fs-10: 1.125rem;
-$fs-12: 1.25rem;
-$fs-14: 2.5rem;
-$fs-16: 4rem;
-$fs-18: 5.5rem;
+$fs-8: 1rem; // 16px
+$fs-10: 1.125rem; // 18px
+$fs-12: 1.25rem; // 20px
+$fs-13: 2rem; // 32px
+$fs-14: 2.5rem; // 40px
+$fs-16: 4rem; // 64px
+$fs-18: 5.5rem; // 88px
 
 // line heights
 $lh-8: 16px;
@@ -39,10 +40,37 @@ $ls-6: -0.75px;
 $ls-8: -0.45px;
 
 // sizes
+// maybe...
+
+// utilities
+$radius: 2rem;
 
 // placeholders
 
 // mixins
+@mixin width-with-padding($width, $padding: 2rem) {
+	width: min(100% - $padding, $width);
+	margin-inline: auto;
+}
+
+@mixin width-full($width) {
+	width: min($width, 100%);
+	margin-inline: auto;
+}
+
+@mixin radius-top {
+	border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+@mixin radius-bottom {
+	border-bottom-left-radius: $radius;
+	border-bottom-right-radius: $radius;
+}
+
+@mixin radius-full {
+	border-radius: $radius;
+}
 
 // basic reset
 *,
@@ -57,6 +85,64 @@ $ls-8: -0.45px;
 	font: inherit;
 }
 
+html,
 body {
 	font-family: $ff;
+	height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+// hard set the width for mobile layout.
+// will be removed when the layout is responsive.
+body {
+	@include width-full(375px);
+
+	background: url(../assets/bg-main-mobile.png) no-repeat;
+	background-position: top -160px right 100%;
+	background-size: cover;
+}
+
+.header {
+	padding-inline: 1.5rem;
+	margin-top: 2.5rem;
+}
+
+.hero {
+	margin-top: 4rem;
+
+	.container {
+		padding-inline: 1.5rem;
+		display: grid;
+		gap: 1.25rem;
+	}
+
+	&__title {
+		font-size: $fs-14;
+		font-weight: $fw-bold;
+		line-height: $lh-20;
+		letter-spacing: $ls-8;
+	}
+
+	&__body {
+		font-size: $fs-8;
+		line-height: $lh-12;
+	}
 }
