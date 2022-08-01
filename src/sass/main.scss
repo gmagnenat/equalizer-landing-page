@@ -207,37 +207,30 @@ body {
 	}
 }
 
-
 // footer
 
-.foot-container{
-	margin-top: 4rem;
+.footer {
+	padding-inline: 1.5rem;
+	padding-block: 4rem;
 
-	 .logo{
-		padding-bottom: $fs-12;
+	&__logo {
+		// padding-bottom: $fs-12;
 	}
 
-	 .center-text{
-		width: 295px;
-		margin-top: 1rem;
-		p{
-			line-height: $lh-14;
-		}
-		span{
+	&__body {
+		margin-top: 2rem;
+		line-height: $lh-12;
+
+		span {
 			font-weight: $fw-bold;
 		}
 	}
 
-	.socials{
-		padding-top: 3rem;
-		padding-bottom: 2rem;
+	.socials {
+		margin-top: 4rem;
+		// padding-bottom: 2rem;
 		display: flex;
-
-		 a{
-			margin-right: 1rem;		}
+		gap: 1.2rem;
+		align-items: center;
 	}
-
-
 }
-
-
