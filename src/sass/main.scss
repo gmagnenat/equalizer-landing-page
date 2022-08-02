@@ -150,12 +150,12 @@ body {
 
 // main section
 .main {
+	background: url(../assets/bg-pattern-2.svg) no-repeat top center;
+	background-size: 74%;
 	background-color: $clr-neutral-800;
 	@include radius-full;
 
 	&__illustration {
-		background: url(../assets/bg-pattern-2.svg) no-repeat top center;
-		background-size: 74%;
 		padding-inline: 3rem;
 		margin-inline: auto;
 		max-height: 380px;
