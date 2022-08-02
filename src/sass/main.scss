@@ -127,6 +127,7 @@ body {
 
 .hero {
 	margin-top: 4rem;
+	margin-bottom: 10rem;
 
 	.container {
 		padding-inline: 1.5rem;
@@ -144,6 +145,26 @@ body {
 	&__body {
 		font-size: $fs-8;
 		line-height: $lh-12;
+	}
+}
+
+// main section
+.main {
+	background: url(../assets/bg-pattern-2.svg) no-repeat top center;
+	background-size: 74%;
+	background-color: $clr-neutral-800;
+	@include radius-full;
+
+	&__illustration {
+		padding-inline: 3rem;
+		margin-inline: auto;
+		max-height: 380px;
+
+		> img {
+			max-width: 13rem;
+			margin-inline: auto;
+			transform: translateY(-100px);
+		}
 	}
 }
 
