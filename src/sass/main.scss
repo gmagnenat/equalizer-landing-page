@@ -206,7 +206,7 @@ body {
 	font-weight: $fw-bold;
 	cursor: pointer;
 	text-align: center;
-
+	transition: 0.3s ease-in-out all;
 	@include radius-full;
 
 	display: flex;
@@ -220,10 +220,11 @@ body {
 	&--alternate {
 		background-color: $clr-neutral-100;
 		color: $clr-neutral-800;
+		transition: 0.3s ease-in-out all;
 
 		&:hover{
 			background-color: $clr-tertiary-400;
-			color: $clr-neutral-100;
+			color: $clr-neutral-800;
 		}
 	}
 
@@ -269,8 +270,8 @@ body {
 		gap: 1.2rem;
 		align-items: center;
 
-		#facebook:hover{
-			background-color: $clr-tertiary-400;
+		a img:hover{
+				background-color: $clr-tertiary-400;
 		}
 	}
 }
