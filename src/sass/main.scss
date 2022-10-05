@@ -113,16 +113,37 @@ h6 {
 // hard set the width for mobile layout.
 // will be removed when the layout is responsive.
 body {
-	@include width-full(375px);
-
 	background: url(../assets/bg-main-mobile.png) no-repeat;
 	background-position: top -160px right 100%;
 	background-size: cover;
+
+	@include width-full(375px);
+
+	@media (min-width: 768px) {
+		@include width-full(600px);
+	}
+
+	@media (min-width: 992px) {
+		@include width-full(900px);
+	}
 }
 
 .header {
 	padding-inline: 1.5rem;
 	margin-top: 2.5rem;
+
+	&__art {
+		@media (min-width: 768px) {
+			display: block;
+			position: absolute;
+			top: -36px;
+			right: -40px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		padding-inline: 0rem;
+	}
 }
 
 .hero {
@@ -133,6 +154,11 @@ body {
 		padding-inline: 1.5rem;
 		display: grid;
 		gap: 1.25rem;
+
+		@media (min-width: 768px) {
+			padding-inline: 0rem;
+			gap: 1.7rem;
+		}
 	}
 
 	&__title {
@@ -140,11 +166,26 @@ body {
 		font-weight: $fw-bold;
 		line-height: $lh-20;
 		letter-spacing: $ls-8;
+
+		@media (min-width: 768px) {
+			font-size: $fs-16;
+			line-height: $lh-24;
+		}
 	}
 
 	&__body {
 		font-size: $fs-8;
 		line-height: $lh-12;
+
+		@media (min-width: 768px) {
+			font-size: $fs-10;
+			line-height: $lh-14;
+			max-width: 47ch;
+		}
+	}
+
+	@media (min-width: 768px) {
+		margin-top: 6rem;
 	}
 }
 
